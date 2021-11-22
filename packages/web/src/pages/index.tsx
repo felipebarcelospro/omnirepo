@@ -1,11 +1,13 @@
+import NextHead from 'next/head'
+
 import { Box, Container, Heading, Badge } from '@chakra-ui/react'
-import Head from 'next/head'
 import { ReactElement } from 'react'
+import { version } from '../../package.json'
 
 const Home = (): ReactElement => {
   return (
     <>
-      <Head>
+      <NextHead>
         <link rel="manifest" href="manifest.json" />
 
         <meta name="mobile-web-app-capable" content="yes" />
@@ -27,12 +29,12 @@ const Home = (): ReactElement => {
 
         <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
 
-        <title>Omnirepo V1</title>
-      </Head>
+        <title>Omnirepo V{version}</title>
+      </NextHead>
       <Box minH="100vh" d="flex" alignItems="center">
         <Container textAlign="center">
           <Heading>Omnirepo</Heading>
-          <Badge colorScheme="green">Version 1.0</Badge>
+          <Badge colorScheme="green">Version {version}</Badge>
         </Container>
       </Box>
     </>
