@@ -12,8 +12,8 @@ module.exports = {
     'prettier/@typescript-eslint',
     'prettier/standard',
     'prettier/react',
-    "next",
-    "next/core-web-vitals"
+    'next',
+    'next/core-web-vitals'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -26,14 +26,20 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'react/no-children-prop': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/display-name': 'off',
+    'import/no-anonymous-default-export': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+    'no-useless-constructor': 'off'
   },
   settings: {
     'import/resolver': {
       typescript: {}
     },
     react: {
-      version: 'detect',
-    },
+      version: 'detect'
+    }
   }
 }
