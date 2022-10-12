@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+'use strict';
 
-export default config => {
+/* eslint-disable no-unused-vars */
+module.exports = (config, webpack) => {
   // Note: we provide webpack above so you should not `require` it
   // Perform customizations to webpack config
   // Important: return the modified config
-  return config
-}
+  return config;
+};

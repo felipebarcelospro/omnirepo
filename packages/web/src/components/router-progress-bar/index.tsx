@@ -2,13 +2,11 @@ import * as React from 'react'
 
 import { NProgress } from '@saas-ui/react'
 import { useEffect, useState } from 'react'
-import { NextRouter } from 'next/router'
+import { RouterProgressBarProps } from './types'
 
-type Props = {
-  router: NextRouter
-}
-
-export const RouterProgressBar = (props: Props): React.ReactElement => {
+export const RouterProgressBar = (
+  props: RouterProgressBarProps
+): React.ReactElement => {
   const { router } = props
 
   const [state, setState] = useState({
